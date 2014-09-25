@@ -103,6 +103,6 @@ void HelloWorld::menuStartCallback(Ref* sender)
 {
 	auto gameScene = GameScene::create();
 	TransitionScene* transitionScene = TransitionFade::create(1, gameScene);
-	Director::getInstance()->replaceScene(gameScene);
+	Director::getInstance()->replaceScene(transitionScene);
 }
 

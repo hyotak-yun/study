@@ -6,9 +6,20 @@
 //
 //
 
-#ifndef __testgame__GameScene__
-#define __testgame__GameScene__
+#pragma once
 
-#include <stdio.h>
+#include "cocos2d.h"
 
-#endif /* defined(__testgame__GameScene__) */
+
+class GameScene : public cocos2d::Scene
+{
+public:
+	GameScene();
+	virtual ~GameScene();
+
+	CREATE_FUNC(GameScene);
+	
+protected:
+	virtual bool init();
+	
+};

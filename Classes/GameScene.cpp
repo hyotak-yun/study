@@ -7,3 +7,19 @@
 //
 
 #include "GameScene.h"
+
+
+GameScene::GameScene()
+{
+	
+}
+
+GameScene::~GameScene()
+{
+	
+}
+
+bool GameScene::init()
+{
+	return false;
+}

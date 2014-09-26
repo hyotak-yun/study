@@ -83,7 +83,6 @@ bool HelloWorld::init()
     return true;
 }
 
-
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
@@ -102,7 +101,10 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 void HelloWorld::menuStartCallback(Ref* sender)
 {
 	auto gameScene = GameScene::create();
-	TransitionScene* transitionScene = TransitionFade::create(1, gameScene);
-	Director::getInstance()->replaceScene(transitionScene);
+	if (nullptr != gameScene)
+	{
+		TransitionScene* transitionScene = TransitionFade::create(1, gameScene);
+		Director::getInstance()->replaceScene(transitionScene);
+	}
 }
 

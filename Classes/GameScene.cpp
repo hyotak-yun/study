@@ -9,6 +9,7 @@
 #include "GameScene.h"
 #include "GameLayer.h"
 #include "BackgroundLayer.h"
+#include "HudLayer.h"
 
 
 using namespace cocos2d;
@@ -47,6 +48,15 @@ bool GameScene::init()
 		return false;
 	}
 	addChild(gameLayer);
+	
+	HudLayer* hudLayer = HudLayer::create();
+	if (!hudLayer)
+	{
+		return false;
+	}
+	addChild(hudLayer);
+	
+	hudLayer->setEventListener(gameLayer);
 	
 	return true;
 }

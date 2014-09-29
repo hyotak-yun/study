@@ -9,9 +9,13 @@
 #pragma once
 
 #include <cocos2d.h>
+#include "HudLayer.h"
 
+
+class PlayerSprite;
 
 class GameLayer : public cocos2d::Layer
+	, public HudEventListener
 {
 public:
 	GameLayer();
@@ -21,7 +25,15 @@ public:
 	
 	
 protected:
-	virtual bool init();
+	
+private:
+	bool init() override;
+	void onHudEventTouch() override;
+	bool onContactBegin(cocos2d::PhysicsContact& contact);
+	void onUpdate(float delta);
+	
+    PlayerSprite* _playerSprite;
+	cocos2d::SEL_SCHEDULE _selSchedule;
 	
 };
 

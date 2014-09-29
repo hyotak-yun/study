@@ -19,7 +19,7 @@ public:
 
 	CREATE_FUNC(GameScene);
 	
-protected:
-	virtual bool init();
+private:
+	bool init() override;
 	
 };

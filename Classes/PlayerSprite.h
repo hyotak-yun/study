@@ -16,7 +16,9 @@ class PlayerSprite : public cocos2d::Sprite
 public:
 	PlayerSprite();
 	virtual ~PlayerSprite();
-	
-protected:
-	virtual bool init();
+    
+    CREATE_FUNC(PlayerSprite);
+    
+private:
+	bool init() override;
 };

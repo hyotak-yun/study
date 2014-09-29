@@ -37,6 +37,7 @@
 		2D78380C19D52EDF009326CD /* bat_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D78380619D52EDF009326CD /* bat_5.png */; };
 		2D78380D19D52EDF009326CD /* bat_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D78380719D52EDF009326CD /* bat_6.png */; };
 		2D78380E19D52EDF009326CD /* bat_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D78380819D52EDF009326CD /* bat_7.png */; };
+		2DDF383219D94FD300DE1CFA /* HudLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF383019D94FD300DE1CFA /* HudLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -256,6 +257,8 @@
 		2D78380619D52EDF009326CD /* bat_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bat_5.png; path = images/bat_5.png; sourceTree = "<group>"; };
 		2D78380719D52EDF009326CD /* bat_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bat_6.png; path = images/bat_6.png; sourceTree = "<group>"; };
 		2D78380819D52EDF009326CD /* bat_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bat_7.png; path = images/bat_7.png; sourceTree = "<group>"; };
+		2DDF383019D94FD300DE1CFA /* HudLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HudLayer.cpp; path = ../Classes/HudLayer.cpp; sourceTree = "<group>"; };
+		2DDF383119D94FD300DE1CFA /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HudLayer.h; path = ../Classes/HudLayer.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -374,6 +377,8 @@
 				2D7837EF19D40F7A009326CD /* GameScene.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
+				2DDF383019D94FD300DE1CFA /* HudLayer.cpp */,
+				2DDF383119D94FD300DE1CFA /* HudLayer.h */,
 				2D78380019D5121F009326CD /* PlayerSprite.cpp */,
 				2D78380119D5121F009326CD /* PlayerSprite.h */,
 			);
@@ -730,6 +735,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2D7837FD19D50566009326CD /* BackgroundLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				2DDF383219D94FD300DE1CFA /* HudLayer.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				2D7837F019D40F7A009326CD /* GameScene.cpp in Sources */,

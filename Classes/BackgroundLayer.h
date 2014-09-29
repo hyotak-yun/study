@@ -21,7 +21,7 @@ public:
 	
 	CREATE_FUNC(BackgroundLayer);
 	
-protected:
-	virtual bool init();
+private:
+	bool init() override;
 	
 };

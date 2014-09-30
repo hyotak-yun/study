@@ -13,3 +13,9 @@ xcuserdata/
 # Generated files
 *.o
 *.pyc
+
+# Windows
+Debug.win32/
+Release.win32/
+*.sdf
+*.suo

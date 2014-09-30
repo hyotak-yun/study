@@ -56,16 +56,47 @@ bool GameLayer::init()
 	contactListener->onContactBegin = CC_CALLBACK_1(GameLayer::onContactBegin, this);
 	getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
 	
+//	_selSchedule = schedule_selector(GameLayer::onUpdate);
+//	schedule(_selSchedule);
 	
-	_selSchedule = schedule_selector(GameLayer::onUpdate);
-	schedule(_selSchedule);
+	scheduleUpdate();
 	
 	return true;
 }
 
-void GameLayer::onHudEventTouch()
+void GameLayer::update(float dt)
 {
 	
+}
+
+void GameLayer::onHudEventActionMoveToRight()
+{
+	if (nullptr != _playerSprite)
+	{
+//		_playerSprite->getPhysicsBody()->setVelocity(Vect(100, 260));
+		
+		auto action = MoveBy::create(1, Point(100, 0));
+		_playerSprite->runAction(action);
+	}
+}
+
+void GameLayer::onHudEventActionMoveToLeft()
+{
+	if (nullptr != _playerSprite)
+	{
+//		_playerSprite->getPhysicsBody()->setVelocity(Vect(-100, 260));
+		
+		auto action = MoveBy::create(1, Point(100, 0))->reverse();
+		_playerSprite->runAction(action);
+	}
+}
+
+void GameLayer::onHudEventActionStop()
+{
+	if (nullptr != _playerSprite)
+	{
+		_playerSprite->getPhysicsBody()->setVelocity(Vect(0, 0));
+	}
 }
 
 bool GameLayer::onContactBegin(PhysicsContact& contact)

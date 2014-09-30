@@ -28,7 +28,13 @@ protected:
 	
 private:
 	bool init() override;
-	void onHudEventTouch() override;
+	void update(float dt) override;
+	
+	
+	void onHudEventActionMoveToRight() override;
+	void onHudEventActionMoveToLeft() override;
+	void onHudEventActionStop() override;
+	
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
 	void onUpdate(float delta);
 	

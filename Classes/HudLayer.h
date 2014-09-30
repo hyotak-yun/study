@@ -14,7 +14,9 @@
 class HudEventListener
 {
 public:
-	virtual void onHudEventTouch() = 0;
+	virtual void onHudEventActionMoveToRight() = 0;
+	virtual void onHudEventActionMoveToLeft() = 0;
+	virtual void onHudEventActionStop() = 0;
 };
 
 
@@ -31,6 +33,10 @@ protected:
 	
 private:
 	bool init() override;
-	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event);
+	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* unused_event) override;
+	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* unused_event) override;
+	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* unused_event) override;
 	
+	cocos2d::Sprite* _buttonRight;
+	cocos2d::Sprite* _buttonLeft;
 };

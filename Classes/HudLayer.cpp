@@ -46,7 +46,8 @@ bool HudLayer::init()
 	listener->onTouchesEnded = CC_CALLBACK_2(HudLayer::onTouchesEnded, this);
 	
 	auto dispatcher = Director::getInstance()->getEventDispatcher();
-	dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+//	dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+	dispatcher->addEventListenerWithFixedPriority(listener, 1);
 
 	return true;
 }

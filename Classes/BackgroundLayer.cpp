@@ -27,15 +27,26 @@ bool BackgroundLayer::init()
 	{
 		return false;
 	}
-	
-	Size visibleSize = Director::getInstance()->getVisibleSize();
-	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-	Sprite* backgroundSprite = Sprite::create("background_1.png");
-	backgroundSprite->setPosition(Vec2(visibleSize.width / 2 + origin.x
-									   , visibleSize.height / 2 + origin.y));
+//	Size visibleSize = Director::getInstance()->getVisibleSize();
+//	Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
+	for (int i = 0; i < 10; ++i)
+	{
+		for (int j = 0; j < 11; ++j)
+		{
+			auto sprite = Sprite::create("tile.png");
+			
+			sprite->setAnchorPoint(Point::ZERO);
+			sprite->setPosition(Point(i * sprite->boundingBox().size.width
+									  , j * sprite->boundingBox().size.height));
+			addChild(sprite);
+		}
+	}
 	
-	addChild(backgroundSprite, 0);
+	auto action0 = Sequence::create(MoveBy::create(0.5, Point(0, -49)), Place::create(Point::ZERO), NULL);
+	auto action1 = RepeatForever::create(action0);
+	runAction(action1);
 
 	return true;
 }

@@ -103,7 +103,7 @@ void HelloWorld::menuStartCallback(Ref* sender)
 	auto gameScene = GameScene::create();
 	if (nullptr != gameScene)
 	{
-		TransitionScene* transitionScene = TransitionFade::create(1, gameScene);
+		auto transitionScene = TransitionPageTurn::create(1, gameScene, false);
 		Director::getInstance()->replaceScene(transitionScene);
 	}
 }
